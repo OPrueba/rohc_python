@@ -31,4 +31,9 @@ if hc.feedback_to_send():
   # Get the feedback
   feedback_data = hc.get_feedback()
   # Send the feedback over the link
+
+# Finally a few other calls are available
+hc.reinit() # Calls rohc_comp_force_contexts_reinit of the ROHC library
+hc.clear()  # This function simply re-initializes the object
+hc.reset()  # Similar to clear except the previous profiles are reinstated 
 ```
