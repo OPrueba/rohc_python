@@ -323,7 +323,7 @@ ROHC_feedback_to_send(ROHC *self)
   Py_RETURN_FALSE;
 }
 
-/* get_feedback - Get any feedback infomation only (no packet to compress) */
+/* get_feedback - Get any feedback information only (no packet to compress) */
 static PyObject *
 ROHC_get_feedback(ROHC *self)
 {
@@ -415,7 +415,7 @@ ROHC_compress(ROHC *self, PyObject *buffer)
 
   if (status == ROHC_STATUS_SEGMENT)
   {
-    // We segmented - PUNT for now?  Normaly would call rohc_comp_get_segment to get the rest
+    // We segmented - PUNT for now?  Normally would call rohc_comp_get_segment to get the rest
     PyErr_SetString(PyExc_NotImplementedError, "Currently we cannot handle fragmented segments... PUNT!");
     return NULL;
   }
@@ -744,7 +744,7 @@ ROHC_general_info(ROHC *self)
   return result;
 }
 
-/* deslare methods to python */
+/* declare methods to python */
 static PyMethodDef ROHC_methods[] = {
     {"clear", (PyCFunction)ROHC_clear, METH_NOARGS, 
         "Clear ROHC to the defaults, creating a new instance"},
