@@ -4,7 +4,7 @@ from distutils.core import setup, Extension
 import sys
 
 requires = [
-    'python_version >= "2.6.0"'
+    'python_version >= 2.6.0'
 ]
 
 setup(name='ROHC',
